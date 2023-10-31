@@ -23,7 +23,7 @@ end
 end
 
 # Create gossips associated with a user
-10.times do |i|
+9.times do |i|
   Gossip.create!(
     title: Faker::Book.title,
     content: Faker::Quote.matz,

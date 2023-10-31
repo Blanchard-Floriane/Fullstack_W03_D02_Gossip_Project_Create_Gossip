@@ -1,0 +1,22 @@
+<div class="px-4 py-5 mb-5 text-center">
+  <h6 class="display-6 fw-bold"><em>Share Your Gossip XOXO</em></h6>
+  <br>
+  <div class="col-lg-6 mx-auto">
+    <form action= <%= gossips_path %> method="POST">
+      <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+      <h5>Title</h5>
+      <p><small class="text-muted"><em>Your title should be between 3 and 25 characters</em></small></p>
+      <p><input type="string" name="title"></p>
+      <h5>Your Gossip Content</h5>
+      <p><input type="text" name="content"></p>
+      <br>
+      <p><input type="submit" value="Envoyer le formulaire"></p>
+    </form>
+  </div>
+</div>
+
+
+    
+
+
+

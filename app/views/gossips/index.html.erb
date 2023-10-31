@@ -8,7 +8,7 @@
       <footer class="blockquote-footer txt-white"><%= @gossips.last.user.first_name %> <%= @gossips.last.user.last_name %></footer>
     </blockquote>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <%= link_to "Share a Gossip", root_path, class:"btn btn_white px-4 gap-3"%>
+      <%= link_to "Share a Gossip", new_gossip_path, class:"btn btn_white px-4 gap-3"%>
     </div>
   </div>
 </div>
