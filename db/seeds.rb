@@ -24,8 +24,13 @@ end
 
 # Create gossips associated with a user
 9.times do |i|
+  title = Faker::Book.title #pour stopper la génération aléatoire si pas entre 3 et 25 chrs
+  while title.length < 3 || title.length > 25
+    title = Faker::Book.title
+  end
+  
   Gossip.create!(
-    title: Faker::Book.title,
+    title: title,
     content: Faker::Quote.matz,
     user_id: User.all.sample.id
   )

@@ -5,7 +5,10 @@ class GossipsController < ApplicationController
   end
   
   def create #treate infos and save into DB
-    @gossip = Gossip.new(title: params['title'], content: params['content'], user_id: User.all.sample.id)
+    @gossip = Gossip.new(
+      'title' => params[:title],
+      'content' => params[:content], 
+      'user_id' => User.all.sample.id)
 
     if @gossip.save
       flash[:success] = "Thanks for your Gossip XOXO"
